@@ -14,7 +14,7 @@ if(isset($_POST["kullanicikaydet"]))
     $calistirekle = mysqli_query($baglanti,$ekle);
 
     if ($calistirekle) {
-      header("Location: index.php");
+      header("Location: giris.php");
       exit(0);
     }
     else{

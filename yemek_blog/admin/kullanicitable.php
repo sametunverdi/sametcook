@@ -11,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <title>Yorumlar</title>
+    <title>Kayıtlı Kullanıcılar</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -72,11 +72,11 @@ session_start();
         <a href="tarif.php" class="menu-item">Tarif Ekle</a>
         <a href="kullanicitable.php" class="menu-item">Kayıtlı Kullanıcılar</a>
 
-        
+      
     </div>
     <div id="content">
     <div class="card-header">
-         <h4>Yorumlar
+         <h4>Kayıtlı Kullanıcılar
          </h4>
         </div>
         <div class="card-body">
@@ -84,24 +84,32 @@ session_start();
     <thead>
         <tr>
         <th scope="col">ID</th>
-        <th scope="col">Yemek-1</th>
-        <th scope="col">Yemek-2</th>
-        <th scope="col">Yemek-3</th>
-        <th scope="col">Yemek-4</th>
+        <th scope="col">İsim</th>
+        <th scope="col">Soyisim</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Şifre</th>
+        <th scope="col">Kayıt Tarihi</th>
+        <th scope="col">Role</th>
+
         </tr>
     </thead>
     <tbody>
 <?php
-$sql = mysqli_query($baglanti,"SELECT * FROM yorum"); 
+$sql = mysqli_query($baglanti,"SELECT * FROM kullanicilar"); 
 if ($sql) {
     foreach ($sql as $value) {
 ?>       
         <tr>
         <td><?php print $value['id']; ?></td>
-        <td><?php print $value['yemek1']; ?></td>
-        <td><?php print $value['yemek2']; ?></td>
-        <td><?php print $value['yemek3']; ?></td>
-        <td><?php print $value['yemek4']; ?></td>
+        <td><?php print $value['kullanicilar_isim']; ?></td>
+        <td><?php print $value['kullanicilar_soyisim']; ?></td>
+        <td><?php print $value['kullaniciler_mail']; ?></td>
+        <td><?php print $value['kullanicilar_sifre']; ?></td>
+        <td><?php print $value['kullanicilar_tarih']; ?></td>
+        <td><?php print $value['role']; ?></td>
+
+
+
         </tr>
         <tr>
 <?php } } ?>

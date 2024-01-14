@@ -95,6 +95,10 @@ if (isset($_SESSION['id'])) {
         <a href="../index.php" class="menu-item">Anasayfa</a>
         <a href="administek.php" class="menu-item">İstek ve Şikayet</a>
         <a href="yorum.php" class="menu-item">Yorumlar</a>
+        <a href="tarif.php" class="menu-item">Tarif Ekle</a>
+        <a href="kullanicitable.php" class="menu-item">Kayıtlı Kullanıcılar</a>
+
+
         
     </div>
     <div id="content">
